@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0") no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+        }
+        .container {
+            margin-top: 10%;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+        .btn {
+            border-radius: 5px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title text-center">URL Shortener</h1>
+                        <form method="POST" action="{{ url_for('index') }}">
+                            <div class="form-group">
+                                <label for="long_url">Enter Long URL</label>
+                                <input type="url" class="form-control" id="long_url" name="long_url" placeholder="Enter long URL" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Shorten</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+       
+ 
